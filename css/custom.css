@@ -35,3 +35,7 @@ body.background_image {
 .offset_button { 
 	margin-left: 43%;
 }
+
+.margin_20 {
+	margin: 30px;
+}
