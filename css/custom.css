@@ -12,18 +12,26 @@
 }
 
 .front_banner_text { 
-	margin-left: auto;
-	margin-right: auto;
-	width: 30em;
+	color: white;
 }
 
 
 #transparent_box {
-	min-height: 80%;
-	max-width: 60%;
-	background: rgba(54, 25, 25, .5);
+	min-width: 100%;
+	background: rgba(24, 35, 45, .7);
+	padding: 30px;
 }
 
 body.background_image { 
 	background-image: url("../img/background.jpg");
+}
+
+.front_page_div { 
+	width: 880px;
+	padding: 30px;
+	margin-top: 80px;
+}
+
+.offset_button { 
+	margin-left: 43%;
 }
