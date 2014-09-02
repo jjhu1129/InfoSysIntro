@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/custom.css" rel="stylesheet" type="text/css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+		<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Average Salary for Dietrich College Graduates 2013'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Avg Salary (USD)'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Avg. Salary in 2013: <b>${point.y}</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                ['Information Systems', 71844],
+                ['Statistics', 65714],
+                ['Economics', 65417],
+                ['Philosophy', 57250],
+                ['Policy and Management', 53750],
+                ['Psychology', 51929],
+                ['English', 51250],
+                ['Decision Science', 51250]
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                x: 4,
+                y: 10,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif',
+                    textShadow: '0 0 3px black'
+                }
+            }
+        }]
+    });
+});
+</script>
+<script>
+
+$(function () {
+    $('#container2').highcharts({
+        title: {
+            text: 'IS Graduate Average Salary by Year',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '',
+            x: -20
+        },
+        xAxis: {
+            categories: ['2011', '2012', '2013']
+        },
+        yAxis: {
+            title: {
+                text: 'Average Salary (USD)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valuePrefix: '$'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Mean',
+            data: [68056, 70067, 71844]
+        }, {
+            name: 'Median',
+            data: [65004, 67000, 70000]
+        }]
+    });
+});
+</script>
+	</head>
+	<body>
+		<div>
+			<h1>
+				Correct!
+			</h1>
+		</div>
+		<div>
+			The average salary for a graduate in the Information System program as of 2013 is 71.8K. Shown below is a salary comparison between majors here at CMU, and a graph of trends through the years 
+		</div>
+		<div id="container" style="min-width: 500px; height: 400px; margin: 0 auto"></div>
+		<div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+			<a href="question5.html" class="btn btn-info">Next</a>
+	</body>
+
+</html>

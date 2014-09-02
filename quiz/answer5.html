@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/custom.css" rel="stylesheet" type="text/css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+		<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        title: {
+            text: 'IS Additional Major/Minors, 2014'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Major/Minor',
+            data: [
+                ['Computer Science',   33.3],
+                {
+                    name: 'French and Francophone Studies',
+                    y: 33.3,
+                    sliced: true,
+                    selected: true
+                },
+                ['Business Administration', 33.3]
+            ]
+        }]
+    });
+});
+
+
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1>
+				Correct!
+			</h1>
+		</div>
+		<div>
+			When taking an additional major or minor, you are able to double count 2 courses, as stated by the guidelines of the IS program. Keep in mind that you are still bound to the regulations of the additional major/minor in question, whatever those may be. Below are a list of the double majors and minors based on a small sample size of IS students. You can see the diversity in the program even within such a subset of the students.
+		</div>
+		<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"> </div>
+			<a href="question6.html" class="btn btn-info">Next</a>
+	</body>
+
+</html>
